@@ -1,111 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+  <section id="slide1">
+    <header>
+      <nav id="mainnav">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="#slide1" title="active" id="home">Home</a>
+      <a href="#slide2" title="Next Section" id="project1">Project 1</a>
+      <a href="#slide3" title="Next Section" id="project2">Project 2</a>
+      <a href="#slide4" title="Next Section" id="project3">Project 3</a>
+      <a href="#slide5" title="Next Section" id="project4">Project 4</a>
+      <a href="#slide6" title="Next Section" id="project5">Project 5</a>
+    </div>
+
+    <div class="in1">
+      <div class="content">
+        <h1> Marc Anthony Surio</h1>
+        <h2>Full-Stack Web Developer</h2>
+      </div>
+    </div>
+  </section>
+
+  <section id="slide2">
+
+    <div class="in1">
+      <div class="content">
+        <a class="thumbnails" href="#"><img src="#" alt="project 1"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="slide3">
+    <div class="in1">
+      <div class="content">
+        <a href="#"><img src="#" alt="project 2"></a>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="slide4">
+    <div class="in1">
+      <div class="content">
+        <a href="#"><img src="#" alt="project 3"></a>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="slide5">
+    <div class="in1">
+      <div class="content">
+        <a href="#"><img src="#" alt="project 4"></a>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="slide6">
+    <div class="in1">
+      <div class="content">
+        <a href="#"><img src="#" alt="project 5"></a>
+      </div>
+    </div>
+  </section>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script>
-   
-<!----- JQUERY FOR SLIDING NAVIGATION --->   
-$(document).ready(function() {
-  $('a[href*=#]').each(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-    && location.hostname == this.hostname
-    && this.hash.replace(/#/,'') ) {
-      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-       if ($target) {
-         var targetOffset = $target.offset().top;
 
-<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
-         $(this).click(function() {
+  //JQUERY FOR SLIDING NAVIGATION 
+  $(document).ready(function () {
+    $('a[href*=#]').each(function () {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        && location.hostname == this.hostname
+        && this.hash.replace(/#/, '')) {
+        var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
+        var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+        if ($target) {
+          var targetOffset = $target.offset().top;
+
+          //JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV  
+          $(this).click(function () {
             $("#nav li a").removeClass("active");
             $(this).addClass('active');
-           $('html, body').animate({scrollTop: targetOffset}, 1500);
-           return false;
-         });
-      }
-    }
-  });
+            $('html, body').animate({ scrollTop: targetOffset }, 1500);
+            return false;
+          });
+        }
+      }
+    });
 
-});
+  });
 </script>
-  </head>
-<body>
-<section id="slide1">
-	<header>
-	<nav id="mainnav">
-		<ul>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">Resume</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-	</nav>
-</header>
-<div id="mySidenav" class="sidenav">
-  <a href="#slide1" title="active" id="home">Home</a>
-  <a href="#slide2" title="Next Section" id="project1">Project 1</a>
-  <a href="#slide3" title="Next Section" id="project2">Project 2</a>
-  <a href="#slide4" title="Next Section" id="project3">Project 3</a>
-  <a href="#slide5" title="Next Section" id="project4">Project 4</a>
-  <a href="#slide6" title="Next Section" id="project5">Project 5</a>
-</div>
-<div class="in1">
-<div class="content">
-<h1> Marc Anthony Surio</h1>
-<h2>Graphic & Web Design</h2>
-    </div>
-</div>
-	
-</section>
-<section id="slide2">
 
-<div class="in1">
-<div class="content">
-<a class="thumbnails" href="#"><img src="#" alt="project 1"></a>
-</div>	
-</div>
-</section>
-	
-<section id="slide3">
-<div class="in1">
-<div class="content">
-<a href="#"><img src="#" alt="project 2"></a>
-</div>	
-</div>
-	
-</section>
-	  
-<section id="slide4">
-<div class="in1">
-<div class="content">
-<a href="#"><img src="#" alt="project 3"></a>
-</div>	
-</div>
-	
-</section>
-	
-<section id="slide5">
-<div class="in1">
-<div class="content">
-<a href="#"><img src="#" alt="project 4"></a>
-</div>	
-</div>
-	
-</section>
-	
-<section id="slide6">
-<div class="in1">
-<div class="content">
-<a href="#"><img src="#" alt="project 5"></a>
-</div>	
-</div>
-</section>
-</body>
 </html>
-

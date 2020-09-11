@@ -89,13 +89,15 @@ h1{
   font-family: 'Century Gothic',sans-serif;
   color: #f9f3f4;
   font-size: 500%;
-  text-shadow: 0 0 300px #ffffff;
+  text-shadow: 0 0 300px #000000;
+  padding:25px;
 }
 h2{
 	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
 	color:#f9f3f4;
 	font-size:250%;
-	text-shadow:0 0 100px #000;
+  text-shadow:0 0 100px #000;
+  padding:25px;
 }
 
 /*** navigations ***/
